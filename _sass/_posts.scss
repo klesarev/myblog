@@ -1,0 +1,113 @@
+// Posts and pages
+//
+// Each post is wrapped in `.post` and is used on default and post layouts. Each
+// page is wrapped in `.page` and is only used on the page layout.
+
+.page,
+.post {
+  margin-bottom: 4em;
+
+  li + li {
+    // margin-top: .25rem;
+  }
+}
+
+// Blog post or page title
+.page-title,
+.post-title,
+.post-title a {
+  color: #303030;
+}
+.page-title,
+.post-title {
+  margin-top: 0;
+}
+.page-title a:hover,
+.post-title a:hover {
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  color: #655748;
+}
+
+// Meta data line below post title
+.category-list-main,
+.category-list-inner {
+  display: inline-block;
+  padding: 0;
+  margin-right: 0.3rem;
+
+  .item {
+    list-style: none;
+    display: inline-block;
+  }
+
+  .link {
+    font-size: 0.6rem;
+    padding: 1px 10px;
+    background: #a0988c;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #fff;
+    // font-weight: 600;
+  }
+  .link:hover {
+    cursor: pointer;
+    text-decoration: none;
+    background: #eceae6;
+    transition: 0.2s ease-in-out;
+    color: #5d503f;
+  }
+}
+.category-list-inner .link {
+  cursor: pointer;
+    text-decoration: none;
+    background: #eceae6;
+    transition: 0.2s ease-in-out;
+    color: #5d503f;
+}
+.post-date {
+  display: inline;
+  margin-top: -.3rem;
+  margin-bottom: 1rem;
+  color: #9a9a9a;
+  font-size: 0.8rem;
+}
+.post i {
+   display: inline;
+   margin-right: 0.1rem;
+}
+
+// Related posts
+.related {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  li {
+    small {
+      font-size: 75%;
+      color: #999;
+    }
+
+    a:hover {
+      color: #268bd2;
+      text-decoration: none;
+
+      small {
+        color: inherit;
+      }
+    }
+  }
+}

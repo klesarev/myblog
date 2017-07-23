@@ -1,0 +1,49 @@
+---
+layout: default
+title: Home
+---
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <article class="post">
+    <h1 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+    
+    <ul class="category-list-main">
+      {% for category in post.categories %}
+        <li class="item"><a class="link" href="/category/{{ category }}">{{ category }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">
+      <i class="fa fa-calendar-o" aria-hidden="true"></i>
+      {{ post.date | date: "%m.%d.%Y" }}
+    </time>
+    
+      {% if post.excerpt %}
+        
+        {{ post.excerpt }}
+      
+      {% endif %} 
+
+      <p><a href="{{ site.baseurl }}{{ post.url }}">читать...</a></p>
+    
+  </article>
+  {% endfor %}
+</div>
+ 
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Ранее...</a>
+  {% else %}
+    <span class="pagination-item older">Ранее...</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Новее...</a>
+  {% else %}
+    <span class="pagination-item newer">Новее...</span>
+  {% endif %}
+</div> 

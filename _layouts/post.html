@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h2 class="post-title">{{ page.title }}</h2>
+  <!-- <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time> -->
+  
+    <ul class="category-list-inner">
+      {% for category in page.categories %}
+        <li class="item"><a class="link" href="/category/{{ category }}">{{ category }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
+      <i class="fa fa-calendar-o" aria-hidden="true"></i>
+      {{ page.date | date: "%m.%d.%Y" }}
+    </time>
+  
+  {{ content }}
+</article>
+
+{% if site.related_posts != empty %}
+<aside class="related">
+  <h3>Похожие записи</h3>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title }}
+          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m.%d.%Y" }}</time></small>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</aside>
+{% endif %}

@@ -1,0 +1,19 @@
+---
+layout: page
+title: other
+---
+
+
+<ul>
+    {% for post in site.categories.css %} 
+        <li>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% for archive in site.archives %}
+  {% if archive.type == "category" %}
+    <a href="{{ archive.url }}">{{ archive.title }}</a>
+  {% endif %}
+{% endfor %}
