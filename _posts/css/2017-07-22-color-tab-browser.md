@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Цветовая тема браузера CSS
-description: Цветовая тема для браузера под стиль сайта. Color webkit theme Chrome.
+description: Цветовая тема для браузера. Color webkit theme Chrome.
 category: [html, css]
 permalink: /color-tab-theme/
 ---

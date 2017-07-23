@@ -1,18 +1,18 @@
 ---
 layout: post
 title: Глубокое копирование объектов на чистом JS.
-description: Глубокое копирование объяектов в JavaScript. Объекты в Javascript.
+description: Глубокое копирование объектов в JavaScript. Объекты в Javascript. javascript clone function.
 category: javascript
 permalink: /clonirovanie-objectov-js/
 ---
 
-В некоторых ситуациях необходимо глубокуое копирование объекта в JavaScript. Например для реализации опций / настроек в модуле. 
+В некоторых ситуациях необходимо глубокое копирование объекта в JavaScript. Например для реализации опций / настроек в модуле. 
 
 <!--excerpt-->
 <br />
-Функция для глубокого копирования.
+Небольшая функция для глубокого копирования.
 ```javascript
-    function makeClone(obj) {
+function makeClone(obj) {
     var clone = {}; // Создаем новый пустой объект
     
     for (let prop in obj) { 
@@ -31,7 +31,8 @@ permalink: /clonirovanie-objectov-js/
             clone[prop] = obj[prop]; 
         }
     }
+
     return clone;
-    }
+}
 ```
 Не забывайте, что объекты в JavaScript передаются по ссылке. Почитать про это можно [здесь](https://learn.javascript.ru/object)
