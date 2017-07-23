@@ -2,6 +2,15 @@
 //
 // Super small header above the content for site name and short description.
 
+.header-icon {
+  display: inline-block;
+  vertical-align: middle;
+
+  img {
+    margin: 5px 0 0 0;
+  }
+}
+
 .masthead {
   padding-top:    1rem;
   padding-bottom: 1rem;
@@ -12,6 +21,8 @@
   margin-top: 0;
   margin-bottom: 0;
   color: $gray-4;
+  display: inline-block;
+  vertical-align: middle;
 
   a {
     color: inherit;
