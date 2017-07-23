@@ -4,7 +4,7 @@ permalink:           pretty
 # Setup
 title:               Fox[CODE]
 tagline:             Блог о frontend разработке
-url:                 http://getpoole.com
+url:                 http://klesarev.github.io
 paginate:            5
 baseurl:             ""
 excerpt_separator:   "<!--excerpt-->"
@@ -18,14 +18,14 @@ sass:
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Mr[FOX]
+  url:               https://vk.com/id179152023
+  email:             klesareff.igor@yandex.ru
 
 # Custom vars
 version:             2.0.0
 github:
-  repo:              https://github.com/poole/poole
+  # repo:              https://github.com/poole/poole
 
 # Gems
 gems:
