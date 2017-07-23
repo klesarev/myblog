@@ -10,4 +10,4 @@ permalink: /clonirovanie-objectov-js/
 
 <!--excerpt-->
 <br />
-Чтобы
+Чтобы 
