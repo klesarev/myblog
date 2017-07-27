@@ -1,30 +1,38 @@
 ---
 layout: page
-title: About
+title: Обо мне / About me
+description: Рассказ о фронтэнд разработчике. Биография frontend. Как стать frontend.
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  Привет. Этот блог я делал изначально для себя - чтобы был стимул постоянно развиваться, но если тебе, дорогой читатель, что-либо здесь покажется полезным - я буду только рад!
 </p>
 
-In the novel, *The Strange Case of Dr. Jekyll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+Здравствуй. Меня зовут Игорь. По образованию - программист ( <em>да, в дипломе так и написано</em> :) ) 
+Начиная с 17, и на протяжении последующих нексольких лет изучал С#, C++, Delphi. Затем все забросил... 
 
-There are currently two themes built on Poole:
+Какое-то время занимался "эникейством". Работал админом. Через некоторое время меня "занесло" в газету, где трудился граф. дизайнером, а впоследствии и тех.редактором на протяжении 5 лет. 
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+И вот в 30 лет я вновь "заболел" разработкой и очутился в вебе. Мое хобби: дизайн и 3D моделинг не позволили мне окунуться в serverside/backend, так как мне нравится видеть результат работы. Так я и попал во frontend.
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+<blockquote>  
 
-## Setup
+  In this blog, i will write some posts in English. They will be marlked by special tag - <a class="eng-text">en</a>
+  <br />
+  Other posts marked by tags: <ul class="category-list-main" style="-webkit-margin-after: 0;">
+  <li class="item"><a class="link">javascript</a></li>
+  <li class="item"><a class="link">css</a></li>
+  <li class="item"><a class="link">html</a></li>
+  <li class="item"><a class="link">canvas</a></li>
+  </ul>e.t.c., clicking on which give you sorted posts by this category
 
-Some fun facts about the setup of this project include:
+</blockquote>  
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+Связаться со мной можно по:
 
-Thanks for reading!
+* [ВКонтакте](https://vk.com/id179152023)
+* [Почта](klesareff.igor@yandex.ru)
+
+
+Благодарю за внимание!

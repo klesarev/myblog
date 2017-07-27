@@ -72,6 +72,17 @@
     transition: 0.2s ease-in-out;
     color: #5d503f;
 }
+a.eng-text {
+  font-size: 0.6rem;
+  padding: 1px 10px;
+  background: #f26522;
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
 .post-date {
   display: inline;
   margin-top: -.3rem;

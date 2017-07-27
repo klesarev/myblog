@@ -11,6 +11,28 @@
   }
 }
 
+.header-menu {
+  display: block;
+  float: right;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    vertical-align: middle;
+    display: inline;
+    color: #38bb6c;
+    
+    font-weight: 600;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #655748;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
 .masthead {
   padding-top:    1rem;
   padding-bottom: 1rem;
