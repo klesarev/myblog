@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Копирование объектов на чистом JS.
+title: Копирование объектов.
 description: Копирование объектов в JavaScript. Объекты в Javascript. javascript clone function.
 category: javascript
 permalink: /clonirovanie-objectov-js/

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Цветовая тема браузера CSS
+title: Цветовая тема браузера в Android
 description: Цветовая тема для браузера. Color webkit theme Chrome.
 category: [html, css]
 permalink: /color-tab-theme/
