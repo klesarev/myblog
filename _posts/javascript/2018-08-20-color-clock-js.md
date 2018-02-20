@@ -6,14 +6,14 @@ category: javascript
 permalink: /cvetniye-chasy-javascript/
 ---
 
-Итак, сегодня "накидаем" концепт для простеньких часов, цвет фона которых динамично меняется. Для этого нам потребуется объект [Date](https://learn.javascript.ru/datetime) и конечно же ES6(ES2015).
+Итак, сегодня сделаем концепт простеньких часов, цвет фона которых динамично меняется. Для этого нам потребуется объект [Date](https://learn.javascript.ru/datetime) и конечно же ES6(ES2015).
 
 <!--excerpt-->
 
 ### Структура HTML
 Набросаем небольшой "скелет" странички... 
 
-```
+```html
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -24,21 +24,18 @@ permalink: /cvetniye-chasy-javascript/
         <title>Document</title>
     </head>
     <body>
-
     <div class="wrapper">
         <h1>00:00:00</h1>
         <p>#000000</p>
     </div>
-
     <script src='app.js'></script>
-
     </body>
 </html>
 ```
-Затем создадим и подключим файлы **app.js** и **style.css**, в которых соответственно будет наш скрипт и стилизация. Начнем с оформления.
+Затем создадим и подключим файлы **app.js** и **style.css**, в которых соответственно будут наши файлы - скрипта и стилизация. 
 
 ### Оформление
-
+<br/>
 ```css
 /*отцентрируем блок вертикально и горизонтально*/
 .wrapper {
@@ -73,12 +70,11 @@ p {
 ```
 font-family: -apple-system, BlinkMacSystemFont...;
 ```
-Это правило проверяет, установлены ли перечисленные семейства шрифтов в системе и устанавливает их. Например **-apple-system** устанавливает отображение системного шрифтаб устанвленного на IOS и Mac OS. В целом эти шрифты аккуранты и легко читаются.
+Это правило проверяет, установлены ли перечисленные семейства шрифтов в системе и если да, то применяет один из их. Например **-apple-system** устанавливает отображение системного шрифта на IOS и Mac OS.
 
 ### Javascript
 
-Притступим непосредственно к написанию скрипта. Здесь нам понадобится Babel для преобразования ES6 -> ES5. Инструкцию по настройке и устанвоке можно поспотреть [здесь](http://babeljs.io/)
-
+Приступим непосредственно к написанию скрипта. Здесь нам понадобится Babel для преобразования ES6 -> ES5. Инструкцию по настройке и установке можно поспотреть [здесь](http://babeljs.io/)
 <br />
 ```javascript
 const body  = document.querySelector('html');
@@ -87,29 +83,25 @@ const p     = document.querySelector('p');
 
 function changeColor() {
     const now = new Date();
-
     let hours = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
     let minutes = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
     let seconds = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
- 
     h1.innerHTML = `${hours}:${minutes}:${seconds}`;
     p.innerHTML = `#${hours}${minutes}${seconds}`;
-    
     body.style.backgroundColor =`#${hours}${minutes}${seconds}`;
-    
 };
 
 let timer = setInterval(changeColor,1000);
 ```
-
-Давайте теперь разберем то, что мы наспиали. Задаем 3 переменных **body**, **h1** и **p**, выбирая их c помощью нативного метода JS - querySelector('your selector here...'). Его аналог в jQuery это - $('your selector here/...'. 
+<br />
+Давайте теперь разберем код выше. Задаем 3 переменных **body**, **h1** и **p**, c помощью нативного метода JS - querySelector('your selector here...'). Его аналог в jQuery это - $('your selector here/...'. 
 ```javascript
 const body  = document.querySelector('html');
 const h1    = document.querySelector('h1');
 const p     = document.querySelector('p');
 ```
-
-Напишем функцию **changeColor**, которая кск следует из названия собственно и будет менять фон нашей страницы.
+<br />
+Напишем функцию **changeColor**, которая кaк следует из названия и будет менять фон нашей страницы.
 ```javascript
 const now = new Date();
 ```
@@ -120,7 +112,7 @@ let hours = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
 let minutes = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
 let seconds = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
 ```
-С помощью методов: getHours(), getMinutes() и getSeconds извлекаем часы, минуты и секунды. При этом, если число меньше 10, то подставляем 0 - "для красоты", чтобы напрмиер вместо такого времени - _8:6:20_ получить такое -> _08:06:20_.
+С помощью методов: _getHours()_, _getMinutes()_ и _getSeconds()_ извлекаем часы, минуты и секунды. При этом, если число меньше 10, то подставляем 0 - "для красоты", чтобы вместо такого времени - _8:6:20_ получить такое -> _08:06:20_.
 <br />
 ```javascript
 h1.innerHTML = `${hours}:${minutes}:${seconds}`;
@@ -128,14 +120,12 @@ p.innerHTML = `#${hours}${minutes}${seconds}`;
 ```
 Вставляем в H1 наше текущее время в формате строки с помощью строковых шаблонов, подробнее [здесь](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/template_strings). Для отображения цвета ставим в начало символ **#** чтобы получить цвет в формате HEX (_например #206542_);
 <br />
-
 Применяем получившийся цвет к нашему body с помощью все тех же _строковых шаблонов_.
 ```javascript
 body.style.backgroundColor =`#${hours}${minutes}${seconds}`;
 ```
 <br />
-
-Теперь собственно нам остается вызывать нашу функцию каждую секунду, с помощью метода _**setInterval()**_
+Теперь нам остается вызывать нашу функцию каждую секунду, с помощью метода _**setInterval()**_
 ```javascript
 let timer = setInterval(changeColor,1000);
 ```
@@ -143,9 +133,9 @@ let timer = setInterval(changeColor,1000);
 ### Вывод
 Довольно нехитрые часики получились. В сети похожих примеров "воз и маленькая тележка", поэтому в следующих статьях мы сделаем их немного интереснее:
 
-- Сделаем смену цвета более плавной
-- Добавим кадому времени суток свой цвет(диапазон цветов)
-- Добавим настройку времени вручную.
+* Сделаем смену цвета более плавной
+* Добавим кадому времени суток свой цвет(диапазон цветов)
+* Добавим настройку времени вручную.
 
 To be continued....
 
