@@ -8,13 +8,13 @@ permalink: /cvetniye-chasy-javascript/
 
 Итак, сегодня "накидаем" концепт для простеьких часов, цвет фона которых динамично меняется. Для этого нам потребуется объект [Date](https://learn.javascript.ru/datetime) и конечно же ES6(ES2015).
 
-### Структура HTML
-Набросаем небольшой "скелет" странички... 
 <!--excerpt-->
 <br />
 
+### Структура HTML
+Набросаем небольшой "скелет" странички... 
 
-```javascript
+```
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -31,7 +31,7 @@ permalink: /cvetniye-chasy-javascript/
     </div>
 
     <script src='app.js'></script>
-    
+
     </body>
 </html>
 ```
