@@ -110,19 +110,19 @@ const p     = document.querySelector('p');
 ```
 
 Напишем функцию **changeColor**, которая кск следует из названия собственно и будет менять фон нашей страницы.
-```
+```javascript
 const now = new Date();
 ```
 Получаем текущие дату и время с помощью обхекта Date
 <br />
-```
+```javascript
 let hours = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
 let minutes = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
 let seconds = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
 ```
 С помощью методов: getHours(), getMinutes() и getSeconds извлекаем часы, минуты и секунды. При этом, если число меньше 10, то подставляем 0 - "для красоты", чтобы напрмиер вместо такого времени - _8:6:20_ получить такое -> _08:06:20_.
 <br />
-```
+```javascript
 h1.innerHTML = `${hours}:${minutes}:${seconds}`;
 p.innerHTML = `#${hours}${minutes}${seconds}`;
 ```
@@ -130,22 +130,22 @@ p.innerHTML = `#${hours}${minutes}${seconds}`;
 <br />
 
 Применяем получившийся цвет к нашему body с помощью все тех же _строковых шаблонов_.
-```
+```javascript
 body.style.backgroundColor =`#${hours}${minutes}${seconds}`;
 ```
 <br />
 
 Теперь собственно нам остается вызывать нашу функцию каждую секунду, с помощью метода _**setInterval()**_
-```
+```javascript
 let timer = setInterval(changeColor,1000);
 ```
 
 ### Вывод
 Довольно нехитрые часики получились. В сети похожих примеров "воз и маленькая тележка", поэтому в следующих статьях мы сделаем их немного интереснее:
 
-> Сделаем смену цвета более плавной
-> Добавим кадому времени суток свой цвет(диапазон цветов)
-> Добавим настройку времени вручную.
+- Сделаем смену цвета более плавной
+- Добавим кадому времени суток свой цвет(диапазон цветов)
+- Добавим настройку времени вручную.
 
 To be continued....
 
