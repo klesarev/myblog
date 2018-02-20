@@ -94,7 +94,7 @@ function changeColor() {
 let timer = setInterval(changeColor,1000);
 ```
 <br />
-Давайте теперь разберем код выше. Задаем 3 переменных **body**, **h1** и **p**, c помощью нативного метода JS - querySelector('your selector here...'). Его аналог в jQuery это - $('your selector here/...'. 
+Давайте теперь разберем код выше. Задаем 3 переменных **body**, **h1** и **p**, c помощью нативного метода JS - querySelector('_your css selector here..._'). Его аналог в jQuery это - $('_your selector here..._'). 
 ```javascript
 const body  = document.querySelector('html');
 const h1    = document.querySelector('h1');
@@ -103,7 +103,9 @@ const p     = document.querySelector('p');
 <br />
 Напишем функцию **changeColor**, которая кaк следует из названия и будет менять фон нашей страницы.
 ```javascript
-const now = new Date();
+function changeColor() {
+    const now = new Date();
+}
 ```
 Получаем текущие дату и время с помощью обхекта Date
 <br />
@@ -118,7 +120,7 @@ let seconds = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
 h1.innerHTML = `${hours}:${minutes}:${seconds}`;
 p.innerHTML = `#${hours}${minutes}${seconds}`;
 ```
-Вставляем в H1 наше текущее время в формате строки с помощью строковых шаблонов, подробнее [здесь](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/template_strings). Для отображения цвета ставим в начало символ **#** чтобы получить цвет в формате HEX (_например #206542_);
+Вставляем в H1 наше текущее время в формате строки с помощью строковых шаблонов, подробнее [здесь](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/template_strings). Для отображения цвета в ставим в начало символ **#** чтобы получить цвет в формате HEX (_например #206542_);
 <br />
 Применяем получившийся цвет к нашему body с помощью все тех же _строковых шаблонов_.
 ```javascript
