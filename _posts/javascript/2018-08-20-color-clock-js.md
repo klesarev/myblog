@@ -10,7 +10,7 @@ permalink: /cvetniye-chasy-javascript/
 
 <!--excerpt-->
 
-#### Структура HTML
+### Структура HTML
 Набросаем небольшой "скелет" странички... 
 
 ```
@@ -37,7 +37,7 @@ permalink: /cvetniye-chasy-javascript/
 ```
 Затем создадим и подключим файлы **app.js** и **style.css**, в которых соответственно будет наш скрипт и стилизация. Начнем с оформления.
 
-#### Оформление
+### Оформление
 
 ```css
 /*отцентрируем блок вертикально и горизонтально*/
@@ -50,7 +50,10 @@ permalink: /cvetniye-chasy-javascript/
 }
 h1 {
     font-size: 62px;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe\ UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira\ Sans, Droid\ Sans, Helvetica\ Neue, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 
+                 Segoe\ UI, Roboto, Oxygen, Ubuntu, 
+                 Cantarell, Fira\ Sans, Droid\ Sans, 
+                 Helvetica\ Neue, sans-serif;
     font-weight: 300;
     color: #FFF;
     margin: 10px;
@@ -58,22 +61,25 @@ h1 {
 p {
     color: #FFF;
     margin-top: 5px;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe\ UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira\ Sans, Droid\ Sans, Helvetica\ Neue, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 
+                 Segoe\ UI, Roboto, Oxygen, Ubuntu, 
+                 Cantarell, Fira\ Sans, Droid\ Sans, H
+                 elvetica\ Neue, sans-serif;
     font-weight: 300;
 }
 ```
 
 Давайте остановимся подробнее на данной строчке. 
 ```
-font-family: -apple-system, BlinkMacSystemFont, Segoe\ UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira\ Sans, Droid\ Sans, Helvetica\ Neue, sans-serif;
+font-family: -apple-system, BlinkMacSystemFont...;
 ```
 Это правило проверяет, установлены ли перечисленные семейства шрифтов в системе и устанавливает их. Например **-apple-system** устанавливает отображение системного шрифтаб устанвленного на IOS и Mac OS. В целом эти шрифты аккуранты и легко читаются.
 
-#### Javascript
+### Javascript
 
 Притступим непосредственно к написанию скрипта. Здесь нам понадобится Babel для преобразования ES6 -> ES5. Инструкцию по настройке и устанвоке можно поспотреть [здесь](http://babeljs.io/)
 
-Сначала приведу полный листинг кода.
+<br />
 ```javascript
 const body  = document.querySelector('html');
 const h1    = document.querySelector('h1');
@@ -96,10 +102,50 @@ function changeColor() {
 let timer = setInterval(changeColor,1000);
 ```
 
-1. Итак, в начале мы задаем 3 переменных **body**, **h1** и **p**, выбирая их c помощью нативного метода JS - querySelector('your selector here...'). Его аналог в jQuery это - $('your selector here/...'), который знаком многим. 
+Давайте теперь разберем то, что мы наспиали. Задаем 3 переменных **body**, **h1** и **p**, выбирая их c помощью нативного метода JS - querySelector('your selector here...'). Его аналог в jQuery это - $('your selector here/...'. 
 ```javascript
 const body  = document.querySelector('html');
 const h1    = document.querySelector('h1');
 const p     = document.querySelector('p');
 ```
-2. Напишем функцию **changeColor**, которая кск следует из названия собственно и будет менять фон нашей страницы.
+
+Напишем функцию **changeColor**, которая кск следует из названия собственно и будет менять фон нашей страницы.
+```
+const now = new Date();
+```
+Получаем текущие дату и время с помощью обхекта Date
+<br />
+```
+let hours = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+let minutes = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+let seconds = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+```
+С помощью методов: getHours(), getMinutes() и getSeconds извлекаем часы, минуты и секунды. При этом, если число меньше 10, то подставляем 0 - "для красоты", чтобы напрмиер вместо такого времени - _8:6:20_ получить такое -> _08:06:20_.
+<br />
+```
+h1.innerHTML = `${hours}:${minutes}:${seconds}`;
+p.innerHTML = `#${hours}${minutes}${seconds}`;
+```
+Вставляем в H1 наше текущее время в формате строки с помощью строковых шаблонов, подробнее [здесь](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/template_strings). Для отображения цвета ставим в начало символ **#** чтобы получить цвет в формате HEX (_например #206542_);
+<br />
+
+Применяем получившийся цвет к нашему body с помощью все тех же _строковых шаблонов_.
+```
+body.style.backgroundColor =`#${hours}${minutes}${seconds}`;
+```
+<br />
+
+Теперь собственно нам остается вызывать нашу функцию каждую секунду, с помощью метода _**setInterval()**_
+```
+let timer = setInterval(changeColor,1000);
+```
+
+### Вывод
+Довольно нехитрые часики получились. В сети похожих примеров "воз и маленькая тележка", поэтому в следующих статьях мы сделаем их немного интереснее:
+
+> Сделаем смену цвета более плавной
+> Добавим кадому времени суток свой цвет(диапазон цветов)
+> Добавим настройку времени вручную.
+
+To be continued....
+
