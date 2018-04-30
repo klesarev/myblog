@@ -1,16 +1,7 @@
 <header class="masthead">
-    <span class="header-icon">
-        <a href="{{ site.baseurl }}/">
-            <img src="{{ site.baseurl }}/public/header-icon.png" alt="" width="30px" height="auto">
-        </a>
-    </span>
-    <h3 class="masthead-title">
-        <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-        <small>{{ site.tagline }}</small>
-    </h3>
-    <ul class="header-menu">
-        <li>
-            <a href="{{ site.baseurl }}/about">&lt; about me /&gt;</a>
-        </li>
-    </ul>
+  <h3 class="masthead-title">
+    <a href="{{ site.github.url }}/">{{ site.title }}</a>
+    <small class="masthead-subtitle">{{ site.description }}</small>
+    {% include menu.html %}
+  </h3>
 </header>

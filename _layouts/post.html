@@ -2,38 +2,38 @@
 layout: default
 ---
 
-<article class="post">
-  <h2 class="post-title">{{ page.title }}</h2>
-  <!-- <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time> -->
-  
-    <ul class="category-list-inner">
-      {% for category in page.categories %}
-        <li class="item"><a class="link" href="/category/{{ category }}">{{ category }}</a></li>
-      {% endfor %}
-    </ul>
+<h1>
+  {{ page.title }}
+</h1>
 
-    <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
-      <i class="fa fa-calendar-o" aria-hidden="true"></i>
-      {{ page.date | date: "%m.%d.%Y" }}
-    </time>
-  
-  {{ content }}
-</article>
-
-{% if site.related_posts != empty %}
-<aside class="related">
-  <h3>Еще почитать:</h3>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m.%d.%Y" }}</time></small>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</aside>
+{% if page.image %}
+  <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
 {% endif %}
 
-<div id="disqus_thread"></div>
+{{ content }}
+
+<span class="post-date">
+  {{ site.data.settings.post_date_prefix }}
+  {% assign d = page.date | date: "%-d"  %}
+  {{ page.date | date: "%B" }}
+  {% case d %}
+    {% when '1' or '21' or '31' %}{{ d }}st
+    {% when '2' or '22' %}{{ d }}nd
+    {% when '3' or '23' %}{{ d }}rd
+    {% else %}{{ d }}th{% endcase %},
+  {{ page.date | date: "%Y" }}
+  by
+  {% if page.author %}
+    {{ page.author }}
+  {% else %}
+    {{ site.author }}
+  {% endif %}
+</span>
+
+{% include social-sharing.html %}
+
+{% include related-posts.html %}
+
+{% if site.data.settings.disqus.comments %}
+  {% include disqus.html %}
+{% endif %}
