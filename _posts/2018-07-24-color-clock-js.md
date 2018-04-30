@@ -1,11 +1,12 @@
 ---
+
 layout: post
-title: Часы с цветовым фоном на Javascript / Color clock JS.
-description: Создание простых часов с цветным фоном на Javascript и CSS.
-category: javascript
-permalink: /cvetniye-chasy-javascript/
+title: "Часы с цветовым фоном на Javascript"
+description: "Создание простых часов с цветным фоном на Javascript и CSS."
+author: "Paul Finch"
+categories: javascript
+tags: [ES6, DOM]
 image: colorjs.jpg
-tags: [documentation,sample]
 ---
 
 Итак, сегодня сделаем концепт простеньких часов, цвет фона которых динамично меняется. Для этого нам потребуется объект [Date](https://learn.javascript.ru/datetime) и конечно же ES6(ES2015).
@@ -35,9 +36,8 @@ tags: [documentation,sample]
 </html>
 ```
 Затем создадим и подключим файлы **app.js** и **style.css**, в которых соответственно будут наши файлы - скрипта и стилизация. 
-
-### Оформление
 <br/>
+### Оформление
 ```css
 /*отцентрируем блок вертикально и горизонтально*/
 .wrapper {
@@ -75,7 +75,6 @@ font-family: -apple-system, BlinkMacSystemFont...;
 Это правило проверяет, установлены ли перечисленные семейства шрифтов в системе и если да, то применяет один из их. Например **-apple-system** устанавливает отображение системного шрифта на IOS и Mac OS.
 
 ### Javascript
-
 Приступим непосредственно к написанию скрипта. Здесь нам понадобится Babel для преобразования ES6 -> ES5. Инструкцию по настройке и установке можно поспотреть [здесь](http://babeljs.io/)
 <br />
 ```javascript
@@ -133,13 +132,3 @@ body.style.backgroundColor =`#${hours}${minutes}${seconds}`;
 ```javascript
 let timer = setInterval(changeColor,1000);
 ```
-
-### Вывод
-Довольно нехитрые часики получились. В сети похожих примеров "воз и маленькая тележка", поэтому в следующих статьях мы сделаем их немного интереснее:
-
-* Сделаем смену цвета более плавной
-* Добавим кадому времени суток свой цвет(диапазон цветов)
-* Добавим настройку времени вручную.
-
-To be continued....
-

@@ -1,18 +1,24 @@
 ---
 layout: page
-title: Welcome to Lagrange!
+title: Немного обо мне
 ---
 
-Lagrange is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started.
+<p>
+  Привет. Этот блог я делал изначально для себя - чтобы был стимул постоянно развиваться, но если тебе, дорогой читатель что-либо покажется полезным - я буду только рад!
+</p>
 
-### Getting Started
+Здравствуй. Меня зовут Игорь. По образованию - программист ( <em>да, в дипломе так и написано</em> :) ) 
+Начиная с 17, и на протяжении последующих нексольких лет изучал С#, C++, Delphi. Затем все забросил... 
 
-[Getting Started]({{ site.github.url }}{% post_url 2015-10-10-getting-started %}): getting started with installing Lagrange, whether you are completely new to using Jekyll, or simply just migrating to a new Jekyll theme.
+Какое-то время занимался "эникейством". Работал админом. Через некоторое время меня "занесло" в газету, где трудился граф. дизайнером, а впоследствии и тех.редактором на протяжении 5 лет. 
 
-### Example Content
+И вот в 30 лет я вновь "заболел" разработкой и очутился в вебе. Мое хобби: дизайн и 3D моделинг не позволили мне окунуться в serverside/backend, так как мне нравится видеть результат работы. Так я и попал в разработку.
 
-[Text and Formatting]({{ site.github.url }}{% post_url 2014-01-01-text-formatting-examples %})
 
-### Questions?
+Связаться со мной можно по:
 
-This theme is completely free and open source software. You may use it however you want, as it is distributed under the [MIT License](http://choosealicense.com/licenses/mit/). If you are having any problems, any questions or suggestions, feel free to [tweet at me](https://twitter.com/intent/tweet?text=My%question%about%Lagrange%is:%&amp;via=paululele), or [file a GitHub issue](https://github.com/lenpaul/lagrange/issues/new).
+* [ВКонтакте](https://vk.com/id179152023)
+* [Почта](m1sterfinch@yandex.ru)
+
+
+Благодарю за внимание!

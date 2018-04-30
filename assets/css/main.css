@@ -40,10 +40,13 @@ h1{
 
 h1 a {
   text-decoration: none;
+  font-weight: 600;
+  font-size: 28px;
+  font-family: "PT Sans", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #333;
 }
 
@@ -75,6 +78,10 @@ hr {
   border-top: 1px solid #ccc;
 }
 
+p {
+  font-family: "PT Serif", Georgia, "Times New Roman", sans-serif;
+  font-size: 1.1rem;
+}
 /*
   Site container
 */
@@ -82,7 +89,7 @@ hr {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 615px;
+  width: 900px;
 }
 
 /*48em*/
@@ -109,7 +116,7 @@ hr {
 }
 
 .masthead-title a {
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-decoration: none;
   color: #505050;
 }
@@ -244,6 +251,7 @@ hr {
   color: #999;
   font-size: 1rem;
   padding-right: 10px;
+  font-weight: 500;
 }
 
 .social-icons {
@@ -297,6 +305,7 @@ pre code {
   font-size: 100%;
   color: inherit;
   background-color: transparent;
+  font-size: 14px;
 }
 
 /* Pygments via Jekyll */
