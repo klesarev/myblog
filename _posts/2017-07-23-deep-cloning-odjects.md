@@ -1,10 +1,9 @@
 ---
 layout: post
 author: Paul Finch
-title: Копирование объектов.
-description: Копирование объектов в JavaScript. Объекты в Javascript. javascript clone function.
+title: "Копирование объектов."
+description: "Копирование объектов в JavaScript. Объекты в Javascript. javascript clone function."
 categories: javascript
-permalink: /clonirovanie-objectov-js/
 tags: [ES6, ES5, OOP]
 ---
 

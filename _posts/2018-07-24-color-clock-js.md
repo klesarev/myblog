@@ -1,5 +1,4 @@
 ---
-
 layout: post
 title: "Часы с цветовым фоном на Javascript"
 description: "Создание простых часов с цветным фоном на Javascript и CSS."

@@ -3,8 +3,7 @@ layout: post
 author: Paul Finch
 title: Цветовая тема браузера в Android
 description: Цветовая тема для браузера. Color webkit theme Chrome.
-categories: javascript
-permalink: /color-tab-theme/
+categories: web
 image: color-theme.jpg
 tags: [html,css]
 ---
