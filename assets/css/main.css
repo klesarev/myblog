@@ -101,6 +101,28 @@ p {
 }
 
 /*
+  Tags
+*/
+
+
+
+.tag-list {
+  list-style: none;
+  width: 100%;
+  -webkit-padding-start: 0px;
+}
+.tag-list li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 7px 20px;
+  background-color: #F1F1F1;
+  font: 0.85rem 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+.tag-list li:last-child { margin-right: 0; }
+
+/*
   Masthead
 */
 
@@ -134,6 +156,7 @@ p {
   overflow: hidden;
   border-radius: 5px;
   margin-bottom: 25px;
+  margin-top: 1rem;
 }
 
 .thumbnail-container img{
@@ -146,7 +169,7 @@ p {
 */
 
 .post-container {
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
 }
 
 .posts {

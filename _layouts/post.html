@@ -30,9 +30,14 @@ layout: default
   {% endif %}
 </span>
 
-{% include social-sharing.html %}
 
-{% include related-posts.html %}
+<ul class="tag-list">
+  {% for tag in page.tags %}
+    <li class="tag-item">{{ tag }}</li>
+  {% endfor %}
+</ul>
+
+
 
 {% if site.data.settings.disqus.comments %}
   {% include disqus.html %}
