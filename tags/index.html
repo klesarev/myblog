@@ -8,7 +8,7 @@ description: Стати и уроки по ReactJS, JavaScript, Webpack, Firebas
     {% capture tag_name %}{{ tag | first }}{% endcapture %}
         <div class="tag-item">
             <div class="tag-image">
-                <a href="{{ site.baseurl }}/{{ tag_name }}">
+                <a href="{{ site.baseurl }}/{{ tag_name | slugify }}">
                     <img src="{{ site.baseurl }}/assets/img/category/{{ tag_name | slugify }}.svg" alt="">
                 </a>
             </div>
