@@ -3,8 +3,7 @@ layout: post
 title: "Часы с цветовым фоном на Javascript"
 description: "Создание простых часов с цветным фоном на Javascript и CSS."
 author: "Paul Finch"
-categories: javascript
-tags: [ES6, DOM]
+tags:  ["JavaScript", "CSS", "HTML"]
 image: colorjs.jpg
 ---
 

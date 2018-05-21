@@ -3,8 +3,7 @@ layout: post
 title: "Алгоритм нахождения факториала числа"
 description: "Как найти факториал числа. Алгоритм вычисления факториала числа"
 author: "Paul Finch"
-categories: javascript
-tags: [ES6, Algorithm, Computer Science]
+tags:  ["JavaScript", "Algorithm"]
 image: factorial.jpg
 ---
 

@@ -3,8 +3,7 @@ layout: post
 title: "О некоторых особенностях массивов в JavaScript"
 description: "Особенности работы с массивами в JavaScript. Работа с массивами в JavaScript. Массивы JS "
 author: "Paul Finch"
-categories: javascript
-tags: [ES6, Computer Science]
+tags: ["JavaScript"]
 image: array.jpg
 ---
 

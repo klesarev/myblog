@@ -3,8 +3,7 @@ layout: post
 title: "Хостинг для React приложений и не только..."
 description: "Бесплатный хостинг для статический сайтов и React, SPA, Web приложений"
 author: "Paul Finch"
-categories: webdev
-tags: [webdev, hosting, firebase]
+tags: ["JavaScript", "ReactJS", "Firebase", "Git", "NodeJS"]
 image: firebase.jpg
 ---
 

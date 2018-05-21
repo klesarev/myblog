@@ -3,8 +3,7 @@ layout: post
 title: "Бинарный алгоритм поиска на Javascript"
 description: "Базовые алгоритмы на практике - бинарный алгоритм поиска на Javascript"
 author: "Paul Finch"
-categories: javascript
-tags: [ES6, Algorithm, Binary Search, Computer Science]
+tags: ["JavaScript", "Algorithm"]
 image: binary-search.jpg
 ---
 

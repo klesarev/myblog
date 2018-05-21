@@ -165,6 +165,43 @@ p {
 }
 
 /*
+  category
+*/
+#categories {
+  margin-top: 40px;
+}
+.tag-item {
+  vertical-align: top;
+  display: inline-block;
+  width: 210px;
+  margin: 0 5px 15px 0;
+}
+.tag-title {
+  display: block;
+  margin: 5px 0;
+  text-align: center;
+}
+.category-card .title {
+  margin: 10px 0;
+  cursor: pointer;
+} 
+.category-card .button {
+  display: block;
+  padding: 7px 12px;
+  background-color: #F1F1F1;
+  font: 0.85rem 'Roboto', sans-serif;
+  font-weight: 600;
+  float: right;
+}
+.category-post {
+  margin-bottom: 15px;
+}
+.category-post .post-title {
+  margin: 5px 0 3px 0;
+}
+
+
+/*
   Post
 */
 
@@ -268,13 +305,15 @@ p {
 
 .menu-content {
   float: left;
+  margin-top: 5px;
 }
 
 .menu-content a {
-  color: #999;
-  font-size: 1rem;
+  color: #505050;
+  font-size: 1.1rem;
   padding-right: 10px;
   font-weight: 500;
+
 }
 
 .social-icons {

@@ -6,6 +6,13 @@ layout: default
   {{ page.title }}
 </h1>
 
+<ul class="tag-list">
+  {% for tag in page.tags %}
+    <li> <a href="{{ site.baseurl }}/{{ tag | slugify}}">{{ tag }}</a> </li>
+  {% endfor %}
+</ul>
+
+
 {% if page.image %}
   <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
 {% endif %}
@@ -29,14 +36,6 @@ layout: default
     {{ site.author }}
   {% endif %}
 </span>
-
-
-<ul class="tag-list">
-  {% for tag in page.tags %}
-    <li class="tag-item">{{ tag }}</li>
-  {% endfor %}
-</ul>
-
 
 
 {% if site.data.settings.disqus.comments %}

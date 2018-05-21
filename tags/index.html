@@ -1,0 +1,18 @@
+---
+layout: page
+title: Категории
+description: Стати и уроки по ReactJS, JavaScript, Webpack, Firebase и многое другое
+---
+
+    {% for tag in site.tags %}
+    {% capture tag_name %}{{ tag | first }}{% endcapture %}
+        <div class="tag-item">
+            <div class="tag-image">
+                <a href="{{ site.baseurl }}/{{ tag_name }}">
+                    <img src="{{ site.baseurl }}/assets/img/category/{{ tag_name }}.svg" alt="">
+                </a>
+            </div>
+
+            <h3 class="tag-title">{{ tag_name }}</h3>
+        </div>
+    {% endfor %}

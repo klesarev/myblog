@@ -3,8 +3,7 @@ layout: post
 title: "Числа Фибоначчи - 3 способа нахождения"
 description: "Числа Фибоначчи. Нахождение чисел Фибоначчи через рекурсию, формулу Бине и через итерацию(массив)"
 author: "Paul Finch"
-categories: javascript
-tags: [ES6, Algorithm, Computer Science]
+tags:  ["JavaScript", "Algorithm"]
 image: fibonacci.jpg
 ---
 

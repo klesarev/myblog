@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Home
+title: Блог о программировании на JavaScript
+description: Программирование на Javascript, frontend, алгоритмы, React JS, Webpack, использование Git
 ---
 
 {% for post in paginator.posts %}
@@ -8,15 +9,11 @@ title: Home
   <h1>
     <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
   </h1>
-
   {% if post.image %}
   <div class="thumbnail-container">
     <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
   </div>
   {% endif %}
-  <!-- <p>
-    {{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Читать далее</a>
-  </p> -->
   {% if post.excerpt %} 
     {{ post.excerpt }}
   {% endif %} 
@@ -33,7 +30,6 @@ title: Home
   {% else %}
     <span class="pagination-button">{{ site.data.settings.pagination.previous_page }}</span>
   {% endif %}
-
   {% if paginator.previous_page %}
     <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ site.data.settings.pagination.next_page }}</a>
   {% else %}

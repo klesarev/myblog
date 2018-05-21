@@ -3,9 +3,8 @@ layout: post
 author: Paul Finch
 title: Цветовая тема браузера в Android
 description: Цветовая тема для браузера. Color webkit theme Chrome.
-categories: web
+tags: ["CSS", "HTML"]
 image: color-theme.jpg
-tags: [html,css]
 ---
 
 Начиная с версии 39, браузер Chrome для Anddroid поддерживает цветовые темы <code>theme-color</code> для вкладок. Вы наврное видели такой эффект, когда заходите на facebook - вкладка окрашивается в цвета сайта. Чтобы использовать цветовую тему нужно сделать следующее.

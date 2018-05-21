@@ -2,9 +2,9 @@
 layout: post
 author: Paul Finch
 title: "Копирование объектов."
+author: "Paul Finch"
+tags:  ["JavaScript"]
 description: "Копирование объектов в JavaScript. Объекты в Javascript. javascript clone function."
-categories: javascript
-tags: [ES6, ES5, OOP]
 ---
 
 В некоторых ситуациях необходимо копирование объекта в JavaScript с перебором всех свойств. Например для реализации опций / настроек в модуле. 
