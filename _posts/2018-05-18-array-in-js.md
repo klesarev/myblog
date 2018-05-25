@@ -77,6 +77,17 @@ console.log( arr ) // [1, 2, "Wrong"]
 console.log( arrTwo ) // [1, 2, "Wrong"]
 ```
 
+А как же скопировать массив, чтобы работать с ним как с новым? Чтобы не было передачи свойств по ссылке? Легко. Можно использовать оператор [spread](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator) из ES6
+```
+let arr = [1,2,3];
+let arrTwo = [...arr]; // разворачиваем массив
+arrTwo[2] = 'Wrong'
+
+console.log( arr ) // [1, 2, "Wrong"]
+console.log( arrTwo ) // [1, 2, "Wrong"]
+```
+Тут стоит сказать об одном ограничении. Оператор __*spread*__ нельзя использовать для копирования многомерных массивов
+
 P.S. Да, я знаю что это все банально и просто, но некоторые новички могут упустить это из виду. Кстати, в следующих материалах мы рассмотрим новые типы коллекций в JavaScript: __*Set*__, __*Map*__, а также некоторые полезные методы работы с массивами.
 
 Все об Array читайте [здесь](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)
