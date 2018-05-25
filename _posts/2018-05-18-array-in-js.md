@@ -78,9 +78,9 @@ console.log( arrTwo ) // [1, 2, "Wrong"]
 ```
 
 А как же скопировать массив, чтобы работать с ним как с новым? Чтобы не было передачи свойств по ссылке? Легко. Можно использовать оператор [spread](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator) из ES6
-```
+```javascript
 let arr = [1,2,3];
-let arrTwo = [...arr]; // разворачиваем массив
+let arrTwo = [...arr]; // оператор ... (spread)
 arrTwo[2] = 'Wrong'
 
 console.log( arr ) // [1, 2, "Wrong"]
