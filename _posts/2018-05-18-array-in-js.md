@@ -83,7 +83,7 @@ let arr = [1,2,3];
 let arrTwo = [...arr]; // оператор ... (spread)
 arrTwo[2] = 'Wrong'
 
-console.log( arr ) // [1, 2, "Wrong"]
+console.log( arr ) // [1, 2, 3]
 console.log( arrTwo ) // [1, 2, "Wrong"]
 ```
 Тут стоит сказать об одном ограничении. Оператор __*spread*__ нельзя использовать для копирования многомерных массивов
