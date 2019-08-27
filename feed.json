@@ -14,7 +14,7 @@ layout: null
             "url": "{{ post.url | absolute_url }}",
             "title": {{ post.title | jsonify }},
             "content_text": {{ post.content | jsonify }},
-            "banner_image": "/assets/img/{{ post.image | jsonify }}",
+            "banner_image": "/assets/img/{{ post.image }}",
             "date_published": "{{ post.date | date_to_xmlschema }}",
             "tags": {{ post.tags | jsonify }}
         }{% unless forloop.last %},{% endunless %}{% endfor %}
