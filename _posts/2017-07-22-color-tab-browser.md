@@ -12,9 +12,9 @@ image: color-theme.jpg
 <!--excerpt-->
 <br />
 Итак, для отображения цветовой темы нужно добавить специальный <abbr title="<meta>">мета-тег</abbr> в блок <code> <head> </code> следующее:
-``` 
+
 <meta name="theme-color" content="#db5945">
-```
+
 Где атрибут <em>content</em> содержит цвет в формате <abbr title="цвет в 16-ом формате, например: #fff (белый)">HEX</abbr>. С браузерами в Windows Phone и IOS могу возникнуть проблемы. Чтобы добавить поддержку цветовых тем для всех систем, можно использовать следующий код.
 ```html
 <!-- Chrome, Firefox OS and Opera -->
